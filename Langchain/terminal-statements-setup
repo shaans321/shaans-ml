@@ -1,0 +1,26 @@
+cd /root && mkdir -p langchain-lab && cd langchain-lab
+
+(venv) PS C:\Users\sarig\Documents\Langchain> python3 -m venv venv 
+
+(venv) PS C:\Users\sarig\Documents\Langchain> python source venv/bin/activate
+C:\Users\sarig\Documents\Langchain\venv\Scripts\python.exe: can't open file 'C:\\Users\\sarig\\Documents\\Langchain\\source': [Errno 2] No such file or directory
+(venv) PS C:\Users\sarig\Documents\Langchain> cd .\venv\
+
+(venv) PS C:\Users\sarig\Documents\Langchain> .\.venv\Scripts\python.exe -m pip install --upgrade pip uv
+
+## Core LangChain packages
+(venv) PS C:\Users\sarig\Documents\Langchain> .\.venv\Scripts\python.exe -m uv pip install langchain langchain-community langchain-core langchain-text-splitters langchain-huggingface
+Checked 5 packages in 13ms
+
+## LLM Providers
+(venv) PS C:\Users\sarig\Documents\Langchain> .\.venv\Scripts\python.exe -m uv pip install langchain-openai langchain-anthropic langchain-google-genai
+Checked 3 packages in 12ms
+
+## Vector store and embeddings
+(venv) PS C:\Users\sarig\Documents\Langchain> .\.venv\Scripts\python.exe -m uv pip install faiss-cpu sentence-transformers
+Checked 2 packages in 11ms
+
+## UI and utilities
+(venv) PS C:\Users\sarig\Documents\Langchain> .\.venv\Scripts\python.exe -m uv pip install python-dotenv gradio
+Checked 2 packages in 12ms
+
